@@ -83,22 +83,53 @@ const andLogicalOperator = 5 >= 3 && 2 < 6 && 10 === 1;
 // returns true if one of the comparison is true
 
 const myVar = 2 < 1 || 2 == 2;
-console.log('OR operator:', myVar);
+// console.log('OR operator:', myVar);
 
 // ! = exclamation point is "not" operator
-console.log('NOT operator:', !myVar);
+// console.log('NOT operator:', !myVar);
 
-// define a function
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//  FUNCTION
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // It allows us to reuse block of codes
 
 // its either will return a value or not
 // function that doesn't return a value is called void function
-function addTwoNumbersAndMultiplyItsResult() {
-  console.log('asdsa');
+
+// function can store a reusable piece of code
+// function can return any data types or just a void function
+// function that doesn't return any data types are called void function
+
+// There are two types of function
+// A function that will return any data types like string, number or boolean
+// And a function that doesn't return anything
+
+// This is an example of void function
+// void function doesn't use a "return" keyword
+
+function myFunction(param) {
+  capitalize('Testing');
 }
 
-addTwoNumbersAndMultiplyItsResult();
-// invoke the function
+console.log(myFunction());
 
-// console.log(addTwoNumbersAndMultiplyItsResult());
+// This function has a return keyword and so it is not a type of void function
+
+function capitalize(str) {
+  // convert all string characters into uppercase
+  return str.toUpperCase();
+}
+
+console.log(capitalize('hello world'));
+console.log(capitalize('The quick brown fox jump over the lazy dog'));
+
+function addTwoNumbersAndMulitplyBy2(num1, num2) {
+  return num1 + num2 * 2;
+}
+
+const myNumber = addTwoNumbersAndMulitplyBy2(5, 6);
+console.log(myNumber);
+
+const myNum2 = addTwoNumbersAndMulitplyBy2(10, 10);
+console.log(myNum2);
